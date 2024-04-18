@@ -1,0 +1,63 @@
+@mixin res-font($minFont, $maxFont, $minBreakpoint, $maxBreakpoint) {
+  $maxLessOne: $maxBreakpoint - 1;
+
+  $avg: calc(#{$maxFont + $minFont} / 2);
+
+  font-size: #{$minFont}px;
+
+  @media (min-width: #{$minBreakpoint}px) and (max-width: #{$maxLessOne}px) {
+    font-size: #{$avg}px;
+
+    font-size: calc(
+      #{$minFont}px + (#{$maxFont} - #{$minFont}) *
+        (100vw - #{$minBreakpoint}px) / (#{$maxBreakpoint} - #{$minBreakpoint})
+    );
+  }
+
+  @media (min-width: #{$maxBreakpoint}px) {
+    font-size: #{$maxFont}px;
+  }
+}
+
+// Media Queries Mixins
+@mixin mediaXs {
+  @media (max-width: 576.98px) {
+    @content;
+  }
+}
+
+@mixin mediaSm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media (min-width: 769px) and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media (min-width: 992px) and (max-width: 1170.98px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+@mixin media3Xl {
+  @media screen and (min-width: 1921px) {
+    @content;
+  }
+}
+
+@mixin media992px {
+  @media (max-width: 991.98px) {
+    @content;
+  }
+}

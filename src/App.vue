@@ -1,12 +1,11 @@
 <template>
   <main>
-    <TheSideBar />
     <RouterView />
   </main>
 </template>
 
-<script setup>
-import TheSideBar from "./components/UI/TheSideBar.vue";
-</script>
+<script setup></script>
 
-<style scoped lang="scss"></style>
+<style lang="scss">
+@import "@/assets/main.scss";
+</style>
