@@ -32,26 +32,8 @@
   }
 }
 
-@mixin mediaMd {
-  @media (min-width: 769px) and (max-width: 991.98px) {
-    @content;
-  }
-}
-
-@mixin mediaLg {
-  @media (min-width: 992px) and (max-width: 1170.98px) {
-    @content;
-  }
-}
-
 @mixin mediaXl {
   @media screen and (min-width: 1171px) {
-    @content;
-  }
-}
-
-@mixin media3Xl {
-  @media screen and (min-width: 1921px) {
     @content;
   }
 }
