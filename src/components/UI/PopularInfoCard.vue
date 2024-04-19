@@ -1,7 +1,7 @@
 <template>
   <div class="popular-info-card">
     <div class="popular-info">
-      <div class="title">Popular</div>
+      <div class="title">Popular Product</div>
       <ul>
         <li>
           <div class="product-img">
@@ -60,6 +60,9 @@
 }
 .title {
   margin-bottom: 2.2rem;
+  @include res-font(18, 24, 360, 1920);
+  color: #2b2b2b;
+  font-weight: 700;
 }
 ul {
   margin-bottom: 2.2rem;
@@ -67,7 +70,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -83,5 +86,12 @@ ul {
 
 .name {
   margin-bottom: 10px;
+  @include res-font(14, 18, 360, 1920);
+  color: #2b2b2b;
+  font-weight: 700;
+}
+
+.price {
+  color: rgba($color: #000000, $alpha: 0.5);
 }
 </style>

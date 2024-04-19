@@ -12,28 +12,31 @@
       </thead>
       <tbody>
         <tr>
-          <td data-label="Account">Visa - 3412</td>
+          <td data-label="Account">Annual Report</td>
           <td data-label="Due Date">04/01/2016</td>
           <td data-label="Amount">$1,190</td>
-          <td data-label="Period">03/01/2016 - 03/31/2016</td>
+          <td data-label="Period">Raydoan</td>
+          <td data-label="status" class="status sucess">
+            <button>Send</button>
+          </td>
         </tr>
         <tr>
-          <td scope="row" data-label="Account">Visa - 6076</td>
+          <td scope="row" data-label="Account">Business Plan</td>
           <td data-label="Due Date">03/01/2016</td>
           <td data-label="Amount">$2,443</td>
-          <td data-label="Period">02/01/2016 - 02/29/2016</td>
+          <td data-label="Period">Jacob</td>
+          <td data-label="status" class="status error">
+            <button>Pending</button>
+          </td>
         </tr>
         <tr>
-          <td scope="row" data-label="Account">Corporate AMEX</td>
+          <td scope="row" data-label="Account">Marketing Tool</td>
           <td data-label="Due Date">03/01/2016</td>
           <td data-label="Amount">$1,181</td>
-          <td data-label="Period">02/01/2016 - 02/29/2016</td>
-        </tr>
-        <tr>
-          <td scope="row" data-label="Acount">Visa - 3412</td>
-          <td data-label="Due Date">02/01/2016</td>
-          <td data-label="Amount">$842</td>
-          <td data-label="Period">01/01/2016 - 01/31/2016</td>
+          <td data-label="Period">Diana Methews</td>
+          <td data-label="status" class="status sucess">
+            <button>Send</button>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -65,9 +68,11 @@ table td {
 }
 
 table th {
-  font-size: 0.85em;
+  @include res-font(14, 18, 360, 1920);
+  font-weight: 700;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 600px) {
@@ -114,6 +119,38 @@ table th {
 
   table td:last-child {
     border-bottom: 0;
+  }
+}
+
+.status {
+  button {
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    background: #f5f5f5;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    @include res-font(14, 18, 360, 1920);
+    font-weight: 500;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.sucess {
+    button {
+      background: #a4ffa4;
+    }
+  }
+
+  &.error {
+    button {
+      background: #f18888;
+      color: #fff;
+    }
   }
 }
 </style>

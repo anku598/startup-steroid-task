@@ -24,5 +24,9 @@ import TheSideBar from "@/components/UI/TheSideBar.vue";
   padding-top: 2rem;
   padding-right: 2rem;
   flex: 1;
+  margin-bottom: 2rem;
+  @include media992px {
+    padding-top: 3.5rem;
+  }
 }
 </style>
